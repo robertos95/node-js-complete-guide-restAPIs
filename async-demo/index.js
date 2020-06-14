@@ -27,6 +27,8 @@ async function displayCommits() {
   }
 }
 
+displayCommits();
+
 console.log("After");
 
 function getUser(id) {
