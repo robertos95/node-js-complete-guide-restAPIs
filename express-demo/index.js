@@ -1,3 +1,5 @@
+const morgan = require('morgan');
+const helmet = require('helmet');
 const Joi = require("joi");
 const logger = require("./logger");
 const authenticator = require("./authenticator");
@@ -5,15 +7,19 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static("public"));
+app.use(helmet());
+app.use(morgan('tiny'));
+
+app.use(logger);
+app.use(authenticator);
 
 const courses = [
   { id: 1, name: "course1" },
   { id: 2, name: "course2" },
   { id: 3, name: "course3" },
 ];
-
-app.use(logger);
-app.use(authenticator);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
