@@ -45,21 +45,22 @@ const Course = mongoose.model("Course", courseSchema);
 // getCourses();
 
 async function updateCourse(id) {
-  // QUERY FIRST APPROACH
-  const course = await Course.findById(id);
-  if (!course) return;
-
-  // OPTION 1
-  course.isPublished = true;
-  course.author = "Another Author";
-
-  // OPTION 2
-  //   course.set({
-  //     isPublished: true,
-  //     author: "Another Author",
-  //   });
-  const result = await course.save();
+  // UPDATE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
+  const result = await Course.update(
+    { _id: id },
+    { $set: { author: "Bob", isPublished: false } }
+  );
   console.log(result);
+
+  // UPDATE FIRST APPROACH - OPTION 2 (CAN RETURN OLD OR NEW OBJ)
+  const course = await Course.findByIdAndUpdate(
+    id,
+    {
+      $set: { author: "Bobby", isPublished: false },
+    },
+    { new: true }
+  );
+  console.log(course);
 }
 
-updateCourse('5ee64f3596601438f0951dee');
+updateCourse("5ee64f3596601438f0951dee");
