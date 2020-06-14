@@ -1,4 +1,6 @@
 const Joi = require("joi");
+const logger = require("./logger");
+const authenticator = require("./authenticator");
 const express = require("express");
 const app = express();
 
@@ -9,6 +11,9 @@ const courses = [
   { id: 2, name: "course2" },
   { id: 3, name: "course3" },
 ];
+
+app.use(logger);
+app.use(authenticator);
 
 app.get("/", (req, res) => {
   res.send("Hello world");
