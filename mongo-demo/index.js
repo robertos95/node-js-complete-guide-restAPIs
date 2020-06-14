@@ -34,12 +34,32 @@ const Course = mongoose.model("Course", courseSchema);
 
 // createCourse();
 
-async function getCourses() {
-  const courses = await Course.find({ author: "Mosth", isPublished: true })
-    .limit(10)
-    .sort({ name: 1 })
-    .select({ name: 1, tags: 1 });
-  console.log(courses);
+// async function getCourses() {
+//   const courses = await Course.find({ author: "Mosth", isPublished: true })
+//     .limit(10)
+//     .sort({ name: 1 })
+//     .select({ name: 1, tags: 1 });
+//   console.log(courses);
+// }
+
+// getCourses();
+
+async function updateCourse(id) {
+  // QUERY FIRST APPROACH
+  const course = await Course.findById(id);
+  if (!course) return;
+
+  // OPTION 1
+  course.isPublished = true;
+  course.author = "Another Author";
+
+  // OPTION 2
+  //   course.set({
+  //     isPublished: true,
+  //     author: "Another Author",
+  //   });
+  const result = await course.save();
+  console.log(result);
 }
 
-getCourses();
+updateCourse('5ee64f3596601438f0951dee');
