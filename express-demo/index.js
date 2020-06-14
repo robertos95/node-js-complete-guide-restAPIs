@@ -1,16 +1,24 @@
-const morgan = require('morgan');
-const helmet = require('helmet');
+const morgan = require("morgan");
+const helmet = require("helmet");
 const Joi = require("joi");
 const logger = require("./logger");
 const authenticator = require("./authenticator");
 const express = require("express");
 const app = express();
 
+// GET ENVIRONMENT
+// console.log(`NODE_ENV: ${process.env.NODE_ENV}`); // default is undefined
+// console.log(`app: ${app.get('env')}`); // default is development
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(helmet());
-app.use(morgan('tiny'));
+
+if (app.get("env") === "development") {
+  console.log("Morgan enabled!");
+  app.use(morgan("tiny"));
+}
 
 app.use(logger);
 app.use(authenticator);
