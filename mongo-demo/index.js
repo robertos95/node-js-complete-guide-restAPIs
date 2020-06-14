@@ -67,13 +67,12 @@ updateCourse("5ee64f3596601438f0951dee");
 
 async function removeCourse(id) {
   // DELETE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
-//   const result = await Course.deleteOne({ _id: id });
-//   console.log(result);
+  //   const result = await Course.deleteOne({ _id: id });
+  //   console.log(result);
 
   // DELETE FIRST APPROACH - OPTION 2 (RETURN OBJ)
   const course = await Course.findByIdAndRemove(id);
   console.log(course);
-
 }
 
 removeCourse("5ee64f3596601438f0951dee");
