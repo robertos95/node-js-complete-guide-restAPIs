@@ -17,16 +17,29 @@ const courseSchema = new mongoose.Schema({
 
 const Course = mongoose.model("Course", courseSchema);
 
-async function createCourse() {
-  const course = new Course({
-    name: "Angular Course",
-    author: "Mosth",
-    tags: ["angular", "frontend"],
-    isPublished: true,
-  });
+// async function createCourse() {
+//   const course = new Course({
+//     name: "Angular Course",
+//     author: "Mosth",
+//     tags: ["angular", "frontend"],
+//     isPublished: true,
+//   });
 
-  const result = await course.save().then().catch(err=>console.log(err));
-  console.log(result);
+//   const result = await course
+//     .save()
+//     .then()
+//     .catch((err) => console.log(err));
+//   console.log(result);
+// }
+
+// createCourse();
+
+async function getCourses() {
+  const courses = await Course.find({ author: "Mosth", isPublished: true })
+    .limit(10)
+    .sort({ name: 1 })
+    .select({ name: 1, tags: 1 });
+  console.log(courses);
 }
 
-createCourse();
+getCourses();
