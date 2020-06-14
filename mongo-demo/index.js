@@ -8,7 +8,7 @@ mongoose
   });
 
 const courseSchema = new mongoose.Schema({
-  name: String,
+  name: { type: String, required: true },
   author: String,
   tags: [String],
   date: { type: Date, default: Date.now },
@@ -17,22 +17,34 @@ const courseSchema = new mongoose.Schema({
 
 const Course = mongoose.model("Course", courseSchema);
 
-// async function createCourse() {
-//   const course = new Course({
-//     name: "Angular Course",
-//     author: "Mosth",
-//     tags: ["angular", "frontend"],
-//     isPublished: true,
-//   });
+async function createCourse() {
+  const course = new Course({
+    name: "Angular Course",
+    author: "Mosth",
+    tags: ["angular", "frontend"],
+    isPublished: true,
+  });
 
-//   const result = await course
-//     .save()
-//     .then()
-//     .catch((err) => console.log(err));
-//   console.log(result);
-// }
+  try {
+    // TRIGGER VALIDATION MANUALLY
+    // course.validate((err) => {
+    //   if (err) {
+    //   }
+    // });
+    const result = await course.save();
+    console.log(result);
+  } catch (ex) {
+    console.log(ex.message);
+  }
 
-// createCourse();
+  //   const result = await course
+  //     .save()
+  //     .then()
+  //     .catch((err) => console.log(err));
+  //   console.log(result);
+}
+
+createCourse();
 
 // async function getCourses() {
 //   const courses = await Course.find({ author: "Mosth", isPublished: true })
@@ -44,35 +56,35 @@ const Course = mongoose.model("Course", courseSchema);
 
 // getCourses();
 
-async function updateCourse(id) {
-  // UPDATE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
-  const result = await Course.update(
-    { _id: id },
-    { $set: { author: "Bob", isPublished: false } }
-  );
-  console.log(result);
+// async function updateCourse(id) {
+//   // UPDATE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
+//   const result = await Course.update(
+//     { _id: id },
+//     { $set: { author: "Bob", isPublished: false } }
+//   );
+//   console.log(result);
 
-  // UPDATE FIRST APPROACH - OPTION 2 (CAN RETURN OLD OR NEW OBJ)
-  const course = await Course.findByIdAndUpdate(
-    id,
-    {
-      $set: { author: "Bobby", isPublished: false },
-    },
-    { new: true }
-  );
-  console.log(course);
-}
+//   // UPDATE FIRST APPROACH - OPTION 2 (CAN RETURN OLD OR NEW OBJ)
+//   const course = await Course.findByIdAndUpdate(
+//     id,
+//     {
+//       $set: { author: "Bobby", isPublished: false },
+//     },
+//     { new: true }
+//   );
+//   console.log(course);
+// }
 
-updateCourse("5ee64f3596601438f0951dee");
+// updateCourse("5ee64f3596601438f0951dee");
 
-async function removeCourse(id) {
-  // DELETE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
-  //   const result = await Course.deleteOne({ _id: id });
-  //   console.log(result);
+// async function removeCourse(id) {
+//   // DELETE FIRST APPROACH - OPTION 1 (DOESN'T RETURN OBJ)
+//   //   const result = await Course.deleteOne({ _id: id });
+//   //   console.log(result);
 
-  // DELETE FIRST APPROACH - OPTION 2 (RETURN OBJ)
-  const course = await Course.findByIdAndRemove(id);
-  console.log(course);
-}
+//   // DELETE FIRST APPROACH - OPTION 2 (RETURN OBJ)
+//   const course = await Course.findByIdAndRemove(id);
+//   console.log(course);
+// }
 
-removeCourse("5ee64f3596601438f0951dee");
+// removeCourse("5ee64f3596601438f0951dee");
