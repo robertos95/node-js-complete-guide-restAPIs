@@ -24,3 +24,16 @@ describe("greet", () => {
     // expect(result).toContain('Bob');
   });
 });
+
+describe("getCurrencies", () => {
+  it("should return supported currencies", () => {
+    const result = lib.getCurrencies();
+    // PROPER WAY
+    // expect(result).toContain("USD");
+    // expect(result).toContain("AUD");
+    // expect(result).toContain("EUR");
+
+    // IDEAL WAY
+    expect(result).toEqual(expect.arrayContaining(["USD", "EUR", "AUD"]));
+  });
+});
