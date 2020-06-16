@@ -444,3 +444,87 @@
 {"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
 {"message":"Listening on port 3000...","level":"info"}
 {"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"","name":"CastError","stringValue":"\"\"","kind":"ObjectId","value":"","path":"_id","level":"error","stack":"CastError: Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"\n    at new CastError (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\error\\cast.js:29:11)\n    at ObjectId.cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schema\\objectid.js:246:11)\n    at ObjectId.SchemaType.applySetters (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:969:12)\n    at ObjectId.SchemaType._castForQuery (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1383:15)\n    at ObjectId.SchemaType.castForQuery (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1373:15)\n    at ObjectId.SchemaType.castForQueryWrapper (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1352:15)\n    at cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\cast.js:313:32)\n    at model.Query.Query.cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:4644:12)\n    at model.Query.Query._castConditions (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:1842:10)\n    at model.Query.<anonymous> (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:2097:8)\n    at model.Query._wrappedThunk [as _findOne] (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\helpers\\query\\wrapThunk.js:16:8)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\kareem\\index.js:369:33\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"}
+{"message":"Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"","name":"CastError","stringValue":"\"\"","kind":"ObjectId","value":"","path":"_id","level":"error","stack":"CastError: Cast to ObjectId failed for value \"\" at path \"_id\" for model \"Rental\"\n    at new CastError (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\error\\cast.js:29:11)\n    at ObjectId.cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schema\\objectid.js:246:11)\n    at ObjectId.SchemaType.applySetters (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:969:12)\n    at ObjectId.SchemaType._castForQuery (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1383:15)\n    at ObjectId.SchemaType.castForQuery (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1373:15)\n    at ObjectId.SchemaType.castForQueryWrapper (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\schematype.js:1352:15)\n    at cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\cast.js:313:32)\n    at model.Query.Query.cast (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:4644:12)\n    at model.Query.Query._castConditions (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:1842:10)\n    at model.Query.<anonymous> (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\query.js:2097:8)\n    at model.Query._wrappedThunk [as _findOne] (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\mongoose\\lib\\helpers\\query\\wrapThunk.js:16:8)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\node_modules\\kareem\\index.js:369:33\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"level":"error","message":"moment is not definedmoment is not defined","stack":"ReferenceError: moment is not defined\n    at model.rentalSchema.methods.return (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\models\\rental.js:67:19)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\routes\\returns.js:18:3"}
+{"level":"error","message":"moment is not definedmoment is not defined","stack":"ReferenceError: moment is not defined\n    at model.rentalSchema.methods.return (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\models\\rental.js:67:19)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\routes\\returns.js:18:3"}
+{"level":"error","message":"moment is not definedmoment is not defined","stack":"ReferenceError: moment is not defined\n    at model.rentalSchema.methods.return (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\models\\rental.js:67:19)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\routes\\returns.js:18:3"}
+{"level":"error","message":"moment is not definedmoment is not defined","stack":"ReferenceError: moment is not defined\n    at model.rentalSchema.methods.return (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\models\\rental.js:67:19)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\routes\\returns.js:18:3"}
+{"level":"error","message":"moment is not definedmoment is not defined","stack":"ReferenceError: moment is not defined\n    at model.rentalSchema.methods.return (D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\models\\rental.js:67:19)\n    at D:\\Projects\\Node.js\\node-js-complete-guide-restAPIs\\vidly\\routes\\returns.js:18:3"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
+{"message":"Listening on port 3000...","level":"info"}
+{"message":"Connected to mongodb://localhost/vidly_tests...","level":"info"}
