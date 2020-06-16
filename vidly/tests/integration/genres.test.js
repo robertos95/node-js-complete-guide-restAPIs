@@ -27,7 +27,7 @@ describe("/api/genres", () => {
       expect(res.body.some((g) => g.name === "genre2")).toBeTruthy();
     });
   });
- 
+
   describe("GET /:id", () => {
     it("should return a genre if valid id is passed", async () => {
       const genre = new Genre({ name: "genre1" });
@@ -43,6 +43,13 @@ describe("/api/genres", () => {
       const res = await request(server).get("/api/genres/1");
 
       expect(res.status).toBe(404);
+    });
+  });
+
+  describe("POST /", () => {
+    it("should return 401 if client is not logged in", async () => {
+      const res = await request(server).post("/api/genres").send({ name: "genre1" });
+      expect(res.status).toBe(401);
     });
   });
 });
